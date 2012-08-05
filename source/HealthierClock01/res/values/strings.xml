@@ -4,6 +4,10 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_home">HomeActivity</string>
-    <string name="home">首页点击</string>
+    <string name="home">首页</string>
+    <string name="clock">闹钟</string>
+    <string name="remind">健康提醒</string>
+    <string name="information">健康咨询</string>
+    <string name="more">更多</string>
 
 </resources>

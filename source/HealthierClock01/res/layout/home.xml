@@ -1,14 +1,68 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" 
-    android:background="#00ff00">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <Button android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_wood" >
+    <ImageView
+        android:id="@+id/solar"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"/>
+        android:background="@drawable/solar_terms_view_0416" >
+    </ImageView>
+
+    <LinearLayout
+        android:id="@+id/Bottomborder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/bottom_bg" >
+        <Button 
+            android:id="@+id/a"
+            android:layout_width="44dp"
+            android:layout_height="fill_parent"
+            android:drawableTop="@drawable/home"
+            android:background="@android:color/transparent"
+            android:layout_weight="1"
+            android:text="@string/home"
+           />
+        <Button 
+            android:id="@+id/b"
+            android:layout_width="44dp"
+            android:layout_height="fill_parent"
+            android:drawableTop="@drawable/clock"
+            android:background="@android:color/transparent"
+            android:layout_weight="1"
+            android:text="@string/clock"
+           />
+        <Button 
+            android:id="@+id/c"
+            android:layout_width="44dp"
+            android:layout_height="fill_parent"
+            android:drawableTop="@drawable/remind"
+            android:background="@android:color/transparent"
+            android:layout_weight="1"
+            android:text="@string/remind"
+            
+           />
+        <Button 
+            android:id="@+id/d"
+            android:layout_width="44dp"
+            android:layout_height="fill_parent"
+            android:drawableTop="@drawable/information"
+            android:background="@android:color/transparent"
+            android:layout_weight="1"
+            android:text="@string/information"
+           />
+        <Button 
+            android:id="@+id/e"
+            android:layout_width="44dp"
+            android:layout_height="fill_parent"
+            android:drawableTop="@drawable/more"
+            android:background="@android:color/transparent"
+            android:layout_weight="1"
+            android:text="@string/more"
+           />
+    </LinearLayout>
 
 </RelativeLayout>
