@@ -1,5 +1,8 @@
 package com.android.activity;
 
+/**
+ * 首页
+ */
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
