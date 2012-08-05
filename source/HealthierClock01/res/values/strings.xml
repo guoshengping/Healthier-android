@@ -9,5 +9,7 @@
     <string name="remind">健康提醒</string>
     <string name="information">健康咨询</string>
     <string name="more">更多</string>
+    <string name="textup">距离闹钟还有</string>
+    <string name="textdown">一小时59分</string>
 
 </resources>
