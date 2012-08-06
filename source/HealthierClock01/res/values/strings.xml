@@ -11,5 +11,7 @@
     <string name="more">更多</string>
     <string name="textup">距离闹钟还有</string>
     <string name="textdown">一小时59分</string>
+    <string name="norepeat">无重复</string>
+    <string name="shijian">时间</string>
 
 </resources>

@@ -15,36 +15,36 @@
         android:id="@+id/ll"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/solar">
+        android:layout_below="@id/solar" >
 
         <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" android:layout_marginTop="5dp"
-            >
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" >
 
             <ImageView
                 android:id="@+id/clock"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/alarm_1" 
                 android:layout_marginLeft="10dp"
-                />
-            <TextView 
+                android:src="@drawable/alarm_1" />
+
+            <TextView
                 android:id="@+id/textup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/textup"
-                android:layout_toRightOf="@id/clock"
                 android:layout_marginLeft="10dp"
-                />
-            <TextView android:id="@+id/text_down"
+                android:layout_toRightOf="@id/clock"
+                android:text="@string/textup" />
+
+            <TextView
+                android:id="@+id/text_down"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/textdown"
                 android:layout_below="@id/textup"
+                android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/clock"
-                android:layout_marginLeft="10dp"/>
-            
+                android:text="@string/textdown" />
         </RelativeLayout>
     </LinearLayout>
 
@@ -100,6 +100,61 @@
             android:background="@android:color/transparent"
             android:drawableTop="@drawable/more"
             android:text="@string/more" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ll"
+        android:background="@drawable/top_bar_shadow" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tw"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tl"
+        android:background="@drawable/list_item" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/alarm" />
+
+            <TextView
+                android:id="@+id/textlift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/alarm"
+                android:text="@string/clock" />
+
+            <TextView
+                android:id="@+id/text_wunp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textlift"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/alarm"
+                android:text="@string/norepeat" />
+
+            <ImageView
+                android:id="@+id/tixing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="300dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/alarm_2" />
+        </RelativeLayout>
     </LinearLayout>
 
 </RelativeLayout>
