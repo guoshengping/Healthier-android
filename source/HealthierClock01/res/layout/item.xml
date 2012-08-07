@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- 第一部分 -->
+
+    <ImageView
+        android:id="@+id/leftimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/alarm_1" />
+
+    <!-- 第二部分 -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/leftimage"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/leftTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="饮食提醒" />
+
+        <TextView
+            android:id="@+id/leftContext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:30" />
+    </LinearLayout>
+    
+    
+    <!-- 第三部分 -->
+
+    <ImageView
+        android:id="@+id/rightImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/alarm_2" />
+
+    <TextView
+        android:id="@+id/rightText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/rightImage"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:text="12:31" />
+
+</RelativeLayout>

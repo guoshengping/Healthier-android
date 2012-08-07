@@ -35,7 +35,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/clock"
-                android:text="@string/textup" />
+                android:text="@string/textup"
+                android:textColor="#000000" />
 
             <TextView
                 android:id="@+id/text_down"
@@ -44,7 +45,8 @@
                 android:layout_below="@id/textup"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/clock"
-                android:text="@string/textdown" />
+                android:text="@string/textdown" 
+                 android:textColor="#000000"/>
         </RelativeLayout>
     </LinearLayout>
 
@@ -121,12 +123,13 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/Bottomborder"
-        android:layout_below="@id/l2" >
+        android:layout_below="@id/l2" 
+        android:layout_marginTop="2dp">
 
         <!-- listvie控件 -->
 
         <ListView
-            android:id="@+id/list"
+            android:id="@+id/listTest"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
