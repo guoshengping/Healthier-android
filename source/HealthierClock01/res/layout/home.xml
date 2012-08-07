@@ -49,6 +49,20 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/l2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll"
+        android:layout_marginTop="5dp" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_bar_shadow" >
+        </ImageView>
+    </LinearLayout>
+
+    <LinearLayout
         android:id="@+id/Bottomborder"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -103,58 +117,18 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/tl"
+        android:id="@+id/linelayoutlist"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/ll"
-        android:background="@drawable/top_bar_shadow" >
-    </LinearLayout>
+        android:layout_above="@id/Bottomborder"
+        android:layout_below="@id/l2" >
 
-    <LinearLayout
-        android:id="@+id/tw"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tl"
-        android:background="@drawable/list_item" >
+        <!-- listvie控件 -->
 
-        <RelativeLayout
+        <ListView
+            android:id="@+id/list"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
-
-            <ImageView
-                android:id="@+id/alarm"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/alarm" />
-
-            <TextView
-                android:id="@+id/textlift"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@id/alarm"
-                android:text="@string/clock" />
-
-            <TextView
-                android:id="@+id/text_wunp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textlift"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@id/alarm"
-                android:text="@string/norepeat" />
-
-            <ImageView
-                android:id="@+id/tixing"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="300dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/alarm_2" />
-        </RelativeLayout>
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </RelativeLayout>
