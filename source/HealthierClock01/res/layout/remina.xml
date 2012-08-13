@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00ff00" >
+    
+    <TextView 
+        android:id="@+id/myTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:id="@+id/Bottomborder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/bottom_bg" >
+
+        <Button
+            android:id="@+id/a"
+            android:layout_width="44dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/home"
+            android:text="@string/home" />
+
+        <Button
+            android:id="@+id/b"
+            android:layout_width="44dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/clock"
+            android:text="@string/clock" />
+
+        <Button
+            android:id="@+id/c"
+            android:layout_width="44dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/remind"
+            android:text="@string/remind" />
+
+        <Button
+            android:id="@+id/d"
+            android:layout_width="44dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/information"
+            android:text="@string/information" />
+
+        <Button
+            android:id="@+id/e"
+            android:layout_width="44dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/more"
+            android:text="@string/more" />
+    </LinearLayout>
+    
+</RelativeLayout>

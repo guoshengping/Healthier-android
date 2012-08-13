@@ -1,69 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_wood" >
-
-    <ImageView
-        android:id="@+id/solar"
+    android:background="#00aaaa" >
+    
+    <TextView 
+        android:id="@+id/myTextView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/solar_terms_view_0416" >
-    </ImageView>
-
+       />
+ 
     <LinearLayout
-        android:id="@+id/ll"
+        android:id="@+id/topbar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/solar" >
-
-        <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp" >
-
-            <ImageView
-                android:id="@+id/clock"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/alarm_1" />
-
-            <TextView
-                android:id="@+id/textup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@id/clock"
-                android:text="@string/textup"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/text_down"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textup"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@id/clock"
-                android:text="@string/textdown"
-                android:textColor="#000000" />
-        </RelativeLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/l2"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ll"
-        android:layout_marginTop="5dp" >
+        android:background="@drawable/top_bar" >
 
         <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/top_bar_shadow" >
-        </ImageView>
-    </LinearLayout>
+            android:id="@+id/home"
+            android:layout_width="44dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/home_top"
+             />
 
+        <TextView
+            android:id="@+id/center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:text="@string/clocktime"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/save" 
+            android:layout_alignParentRight="true"/>
+    </LinearLayout>
+    
     <LinearLayout
         android:id="@+id/Bottomborder"
         android:layout_width="fill_parent"
@@ -117,21 +94,5 @@
             android:drawableTop="@drawable/more"
             android:text="@string/more" />
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linelayoutlist"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/Bottomborder"
-        android:layout_below="@id/l2"
-        android:layout_marginTop="2dp" >
-
-        <!-- listvie控件 -->
-
-        <ListView
-            android:id="@+id/listTest"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
+    
 </RelativeLayout>
