@@ -14,13 +14,13 @@ public class InformationActivity extends Activity implements OnClickListener {
 	private Button clockBtn = null;// 闹钟
 	private Button redmeBtn = null;// 健康提醒
 	private Button informetionBtn = null;// 健康咨询
-	private Button moreBtn = null;// 更多
+	private Button moreBtn = null;//更多
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.information);
-		// 初始化button
+		// 初始化button，以下都是进行强制转化
 		homeBtn = (Button) findViewById(R.id.a);
 		clockBtn = (Button) findViewById(R.id.b);
 		redmeBtn = (Button) findViewById(R.id.c);

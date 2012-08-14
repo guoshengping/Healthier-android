@@ -19,5 +19,8 @@
     <string name="timer">计时器</string>
     <string name="worldtime">世界时</string>
     <string name="title_activity_instance_of">InstanceOf</string>
+    <string name="clockringtones">闹钟响铃</string>
+    <string name="ringcycle">响铃周期</string>
+    <string name="date">日期</string>
 
 </resources>

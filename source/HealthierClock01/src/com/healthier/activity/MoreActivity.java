@@ -19,7 +19,7 @@ public class MoreActivity extends Activity implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.more);
-		// 初始化button
+		// 初始化button，以下都是进行强制转换
 		homeBtn = (Button) findViewById(R.id.a);
 		clockBtn = (Button) findViewById(R.id.b);
 		redmeBtn = (Button) findViewById(R.id.c);

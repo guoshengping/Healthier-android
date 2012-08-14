@@ -11,17 +11,17 @@ import android.widget.TextView;
 
 public class ReminaAcitivity extends Activity implements OnClickListener {
 
-	private Button homeBut = null;
-	private Button clockBut = null;
-	private Button reminaBut = null;
-	private Button informButton = null;
-	private Button moreButton = null;
+	private Button homeBut = null;//首页
+	private Button clockBut = null;//闹钟
+	private Button reminaBut = null;//健康提醒
+	private Button informButton = null;//健康咨询
+	private Button moreButton = null;//更多
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.remina);
-		// 初始化Button
+		// 初始化Button，以下都是进行强制转换
 		homeBut = (Button) findViewById(R.id.a);
 		clockBut = (Button) findViewById(R.id.b);
 		reminaBut = (Button) findViewById(R.id.c);

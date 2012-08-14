@@ -16,37 +16,38 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
-public class HomeActivity extends Activity implements OnClickListener{
+public class HomeActivity extends Activity implements OnClickListener {
 	private ListView list;// listview 控件
-	private Button homeBtn = null;
-	private Button clockBut = null;
-	private Button reminaBut = null;
-	private Button informetionBtn = null;
-	private Button moreButton = null;
-	/**activity 第一次创建时调用
+	private Button homeBtn = null;//首页
+	private Button clockBut = null;//闹钟
+	private Button reminaBut = null;//健康提醒
+	private Button informetionBtn = null;//健康咨询
+	private Button moreButton = null;//更多
+
+	/**
+	 * activity 第一次创建时调用
 	 * 
 	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);// 保存当前页面状态
 		setContentView(R.layout.home);// 设置布局文件
-		
-		 homeBtn = (Button)findViewById(R.id.a);//首页按钮
-		
-		
-		clockBut = (Button) findViewById(R.id.b);//闹钟按钮
-		clockBut.setOnClickListener(this);
-		
-		reminaBut = (Button) findViewById(R.id.c);//健康提醒按钮
-		reminaBut.setOnClickListener(this);
-		
-		informetionBtn = (Button)findViewById(R.id.d);//健康咨询按钮
-		informetionBtn.setOnClickListener(this);
-		
-		moreButton = (Button) findViewById(R.id.e);//更多按钮
-		moreButton.setOnClickListener(this);
-		
-		list = (ListView) findViewById(R.id.listTest);
+
+		homeBtn = (Button) findViewById(R.id.a);// 首页按钮
+
+		clockBut = (Button) findViewById(R.id.b);// 闹钟按钮
+		clockBut.setOnClickListener(this);//注册监听
+
+		reminaBut = (Button) findViewById(R.id.c);// 健康提醒按钮
+		reminaBut.setOnClickListener(this);//注册监听
+
+		informetionBtn = (Button) findViewById(R.id.d);// 健康咨询按钮
+		informetionBtn.setOnClickListener(this);//注册监听
+
+		moreButton = (Button) findViewById(R.id.e);// 更多按钮
+		moreButton.setOnClickListener(this);//注册监听
+
+		list = (ListView) findViewById(R.id.listTest);// 布局文件
 
 		ArrayList<HashMap<String, String>> arrryList = new ArrayList<HashMap<String, String>>();
 
@@ -79,28 +80,28 @@ public class HomeActivity extends Activity implements OnClickListener{
 	@Override
 	protected void onResume() {
 		super.onResume();
-		homeBtn.setBackgroundResource(R.drawable.btn_foot_hover);//设置点击效果
+		homeBtn.setBackgroundResource(R.drawable.btn_foot_hover);// 设置点击效果
 	}
 
 	@Override
 	public void onClick(View v) {
-		Intent intent = null; 
+		Intent intent = null;
 		switch (v.getId()) {
-		case R.id.b://跳到闹钟界面
-			intent = new Intent(HomeActivity.this,ClockAcitivity.class);
+		case R.id.b:// 跳到闹钟界面
+			intent = new Intent(HomeActivity.this, ClockAcitivity.class);
 			this.startActivity(intent);
 			break;
 
-		case R.id.c://跳到健康提醒界面
-			intent = new Intent(HomeActivity.this,ReminaAcitivity.class);
+		case R.id.c:// 跳到健康提醒界面
+			intent = new Intent(HomeActivity.this, ReminaAcitivity.class);
 			this.startActivity(intent);
 			break;
-		case R.id.d://跳到健康咨询界面
-			intent = new Intent(HomeActivity.this,InformationActivity.class);
+		case R.id.d:// 跳到健康咨询界面
+			intent = new Intent(HomeActivity.this, InformationActivity.class);
 			this.startActivity(intent);
 			break;
-		case R.id.e://跳到更多界面
-			intent = new Intent(HomeActivity.this,MoreActivity.class);
+		case R.id.e:// 跳到更多界面
+			intent = new Intent(HomeActivity.this, MoreActivity.class);
 			this.startActivity(intent);
 			break;
 		default:
