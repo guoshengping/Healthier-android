@@ -2,14 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00aaaa" >
-    
-    <TextView 
-        android:id="@+id/myTextView"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-       />
- 
+    android:background="@drawable/background_wood" >
+
     <LinearLayout
         android:id="@+id/topbar"
         android:layout_width="fill_parent"
@@ -21,26 +15,17 @@
             android:layout_width="44dp"
             android:layout_height="fill_parent"
             android:layout_marginLeft="10dp"
-            android:src="@drawable/home_top"
-             />
+            android:src="@drawable/back" />
 
         <TextView
             android:id="@+id/center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="80dp"
-            android:text="@string/clocktime"
+            android:text="@string/information"
             android:textColor="#000000" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/save" 
-            android:layout_alignParentRight="true"/>
     </LinearLayout>
-    
+
     <LinearLayout
         android:id="@+id/Bottomborder"
         android:layout_width="fill_parent"
@@ -94,5 +79,5 @@
             android:drawableTop="@drawable/more"
             android:text="@string/more" />
     </LinearLayout>
-    
+
 </RelativeLayout>

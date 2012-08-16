@@ -3,6 +3,8 @@ package com.healthier.activity;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import com.healthier.adapter.ClockAdapter;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -45,17 +47,13 @@ public class ClockAcitivity extends Activity implements OnClickListener {
 		HashMap<String, String> map = null;
 		for (int i = 0; i < count; i++) {
 			map = new HashMap<String, String>();
-			map.put("ring_cycle", "响铃周期");
-			map.put("date", "星期一");
-
+			map.put("ring_cycle", "事件");
+			map.put("date", "2012 - 12" + "-" +i);
 			arrryList.add(map);
 		}
 
-		SimpleAdapter listAdapter = new SimpleAdapter(this, arrryList,
-				R.layout.the_middle_picture, new String[] { "ring_cycle",
-						"date", "arrow" }, new int[] { R.id.ring_cycle,
-						R.id.date });
-		picture.setAdapter(listAdapter);
+		ClockAdapter clockAdapter = new ClockAdapter(this, arrryList);
+		picture.setAdapter(clockAdapter);
 	}
 
 	// 监听

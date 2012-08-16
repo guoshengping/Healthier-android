@@ -131,7 +131,10 @@
         <ListView
             android:id="@+id/listTest"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="true" 
+            android:fadingEdge="none"
+            android:cacheColorHint="#00000000" />
     </LinearLayout>
 
 </RelativeLayout>

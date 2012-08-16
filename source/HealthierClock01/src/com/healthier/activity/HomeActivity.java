@@ -18,11 +18,11 @@ import android.widget.SimpleAdapter;
 
 public class HomeActivity extends Activity implements OnClickListener {
 	private ListView list;// listview 控件
-	private Button homeBtn = null;//首页
-	private Button clockBut = null;//闹钟
-	private Button reminaBut = null;//健康提醒
-	private Button informetionBtn = null;//健康咨询
-	private Button moreButton = null;//更多
+	private Button homeBtn = null;// 首页
+	private Button clockBut = null;// 闹钟
+	private Button reminaBut = null;// 健康提醒
+	private Button informetionBtn = null;// 健康咨询
+	private Button moreButton = null;// 更多
 
 	/**
 	 * activity 第一次创建时调用
@@ -36,16 +36,16 @@ public class HomeActivity extends Activity implements OnClickListener {
 		homeBtn = (Button) findViewById(R.id.a);// 首页按钮
 
 		clockBut = (Button) findViewById(R.id.b);// 闹钟按钮
-		clockBut.setOnClickListener(this);//注册监听
+		clockBut.setOnClickListener(this);// 注册监听
 
 		reminaBut = (Button) findViewById(R.id.c);// 健康提醒按钮
-		reminaBut.setOnClickListener(this);//注册监听
+		reminaBut.setOnClickListener(this);// 注册监听
 
 		informetionBtn = (Button) findViewById(R.id.d);// 健康咨询按钮
-		informetionBtn.setOnClickListener(this);//注册监听
+		informetionBtn.setOnClickListener(this);// 注册监听
 
 		moreButton = (Button) findViewById(R.id.e);// 更多按钮
-		moreButton.setOnClickListener(this);//注册监听
+		moreButton.setOnClickListener(this);// 注册监听
 
 		list = (ListView) findViewById(R.id.listTest);// 布局文件
 
