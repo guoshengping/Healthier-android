@@ -3,13 +3,13 @@ package com.healthier.activity;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class InformationActivity extends Activity implements OnClickListener {
-
+	private ImageView returnImageTop;//后退
 	private Button homeBtn = null;// 首页
 	private Button clockBtn = null;// 闹钟
 	private Button redmeBtn = null;// 健康提醒
@@ -21,6 +21,7 @@ public class InformationActivity extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.information);
 		// 初始化button，以下都是进行强制转化
+		returnImageTop = (ImageView)findViewById(R.id.home);
 		homeBtn = (Button) findViewById(R.id.a);
 		clockBtn = (Button) findViewById(R.id.b);
 		redmeBtn = (Button) findViewById(R.id.c);
@@ -28,6 +29,7 @@ public class InformationActivity extends Activity implements OnClickListener {
 		moreBtn = (Button) findViewById(R.id.e);
 
 		// 注册监听
+		returnImageTop.setOnClickListener(this);
 		homeBtn.setOnClickListener(this);
 		clockBtn.setOnClickListener(this);
 		redmeBtn.setOnClickListener(this);
@@ -45,6 +47,10 @@ public class InformationActivity extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		Intent intent = null;
 		switch (v.getId()) {
+		case R.id.home:// 返回
+			intent = new Intent(InformationActivity.this, ReminaAcitivity.class);
+			this.startActivity(intent);
+			break;
 		case R.id.a:// 首页
 			intent = new Intent(InformationActivity.this, HomeActivity.class);
 			this.startActivity(intent);

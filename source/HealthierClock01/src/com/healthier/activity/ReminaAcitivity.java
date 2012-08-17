@@ -16,7 +16,7 @@ import android.widget.SimpleAdapter;
 
 public class ReminaAcitivity extends Activity implements OnClickListener {
 
-	private ImageView homeImageTop;
+	private ImageView homeImageTop;//首页
 	private Button homeBut = null;// 首页
 	private Button clockBut = null;// 闹钟
 	private Button reminaBut = null;// 健康提醒

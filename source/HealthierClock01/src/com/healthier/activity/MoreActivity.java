@@ -6,9 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MoreActivity extends Activity implements OnClickListener {
-
+	private ImageView moreImageTop;//首页
 	private Button homeBtn = null;// 首页
 	private Button clockBtn = null;// 闹钟
 	private Button redmeBtn = null;// 健康提醒
@@ -20,6 +21,7 @@ public class MoreActivity extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.more);
 		// 初始化button，以下都是进行强制转换
+		moreImageTop = (ImageView) findViewById(R.id.home1);
 		homeBtn = (Button) findViewById(R.id.a);
 		clockBtn = (Button) findViewById(R.id.b);
 		redmeBtn = (Button) findViewById(R.id.c);
@@ -27,6 +29,7 @@ public class MoreActivity extends Activity implements OnClickListener {
 		moreBtn = (Button) findViewById(R.id.e);
 
 		// 注册监听
+		moreImageTop.setOnClickListener(this);
 		homeBtn.setOnClickListener(this);
 		clockBtn.setOnClickListener(this);
 		redmeBtn.setOnClickListener(this);
@@ -45,6 +48,10 @@ public class MoreActivity extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		Intent intent = null;
 		switch (v.getId()) {
+		case R.id.home1:// 首页
+			intent = new Intent(MoreActivity.this, HomeActivity.class);
+			this.startActivity(intent);
+			break;
 		case R.id.a:// 首页
 			intent = new Intent(MoreActivity.this, HomeActivity.class);
 			this.startActivity(intent);

@@ -12,12 +12,14 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 public class ClockAcitivity extends Activity implements OnClickListener {
 	private ListView picture;
+	private ImageView homeImageTop;//首页
 	private Button homeBut = null;// 首页
 	private Button clockBut = null;// 闹钟
 	private Button reminaBut = null;// 健康提醒
@@ -28,6 +30,7 @@ public class ClockAcitivity extends Activity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.clock);
 		// 初始化Button，以下都是进行强制转换
+		homeImageTop = (ImageView)findViewById(R.id.home1);
 		homeBut = (Button) findViewById(R.id.a);
 		clockBut = (Button) findViewById(R.id.b);
 		reminaBut = (Button) findViewById(R.id.c);
@@ -35,6 +38,7 @@ public class ClockAcitivity extends Activity implements OnClickListener {
 		moreButton = (Button) findViewById(R.id.e);
 
 		// 注册监听
+		homeImageTop.setOnClickListener(this);
 		homeBut.setOnClickListener(this);
 		reminaBut.setOnClickListener(this);
 		informButton.setOnClickListener(this);
@@ -78,6 +82,10 @@ public class ClockAcitivity extends Activity implements OnClickListener {
 		// TODO Auto-generated method stub
 		Intent intent = null;
 		switch (v.getId()) {
+		case R.id.home1:// 首页
+			intent = new Intent(ClockAcitivity.this, HomeActivity.class);
+			this.startActivity(intent);
+			break;
 		case R.id.a:// 首页
 			intent = new Intent(ClockAcitivity.this, HomeActivity.class);
 			this.startActivity(intent);
