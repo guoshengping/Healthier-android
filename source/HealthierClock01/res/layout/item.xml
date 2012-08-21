@@ -26,16 +26,17 @@
             android:id="@+id/leftTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="饮食提醒" />
+            android:text="@string/dietremind"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/leftContext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="12:30" />
+            android:text="12:30"
+            android:textColor="#000000" />
     </LinearLayout>
-    
-    
+
     <!-- 第三部分 -->
 
     <ImageView
@@ -55,6 +56,7 @@
         android:layout_below="@id/rightImage"
         android:layout_marginRight="10dp"
         android:layout_marginTop="5dp"
-        android:text="12:31" />
+        android:text="12:31"
+        android:textColor="#000000" />
 
 </RelativeLayout>

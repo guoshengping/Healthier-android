@@ -5,16 +5,19 @@ package com.healthier.activity;
  */
 import java.util.ArrayList;
 import java.util.HashMap;
-
+import com.healthier.adapter.HomeAdapter;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
+
 
 public class HomeActivity extends Activity implements OnClickListener {
 	private ListView list;// listview 控件
@@ -51,21 +54,32 @@ public class HomeActivity extends Activity implements OnClickListener {
 
 		ArrayList<HashMap<String, String>> arrryList = new ArrayList<HashMap<String, String>>();
 
-		int count = 16;
+		int count = 20;
 		HashMap<String, String> map = null;
 		for (int i = 0; i < count; i++) {
 			map = new HashMap<String, String>();
 			map.put("leftTitle", "饮食提醒");
 			map.put("leftContext", "每天  08:30 11:00 14:00 16:00");
-			map.put("rightTime", "12:00");
+			map.put("rightText", "12:00");
 			arrryList.add(map);
 		}
 
-		SimpleAdapter listAdapter = new SimpleAdapter(this, arrryList,
-				R.layout.item, new String[] { "leftTitle", "leftContext",
-						"rightTime" }, new int[] { R.id.leftTitle,
-						R.id.leftContext, R.id.rightText });
-		list.setAdapter(listAdapter);
+		HomeAdapter homeAdapter = new HomeAdapter(this, arrryList);
+		list.setAdapter(homeAdapter);
+		
+		//点击其中某一项后，进行跳转
+		list.setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+		
+		Log.e("===item", "ggggg");
+		//在listview中实现某一行的跳转
+		Intent intent = new Intent(HomeActivity.this, Dietremind.class);
+        startActivity(intent);
+			}
+			
+		});
 	}
 
 	@Override
@@ -73,6 +87,8 @@ public class HomeActivity extends Activity implements OnClickListener {
 		getMenuInflater().inflate(R.menu.home, menu);
 		return true;
 	}
+	
+	
 
 	/**
 	 * activity 即将显示时调用

@@ -100,9 +100,13 @@
         android:background="@drawable/list_item" >
 
         <ListView
-            android:id="@+id/the_middle_picture"
+            android:id="@+id/clock_middle_picture"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content" 
+            android:fadeScrollbars="true" 
+            android:fadingEdge="none"
+            android:cacheColorHint="#00000000"
+            >
         </ListView>
 
     </LinearLayout>

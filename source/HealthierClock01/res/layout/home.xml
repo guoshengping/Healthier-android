@@ -124,7 +124,8 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/Bottomborder"
         android:layout_below="@id/l2"
-        android:layout_marginTop="2dp" >
+        android:layout_marginTop="2dp"
+        android:background="@drawable/list_item" >
 
         <!-- listvie控件 -->
 
@@ -132,9 +133,9 @@
             android:id="@+id/listTest"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:fadeScrollbars="true" 
-            android:fadingEdge="none"
-            android:cacheColorHint="#00000000" />
+            android:cacheColorHint="#00000000"
+            android:fadeScrollbars="true"
+            android:fadingEdge="none" />
     </LinearLayout>
 
 </RelativeLayout>

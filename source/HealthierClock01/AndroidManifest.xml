@@ -20,7 +20,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ClockAcitivity" ><!-- 闹钟页面 -->
+        <activity android:name=".ClockAcitivity" >
+
+            <!-- 闹钟页面 -->
+        </activity>
+        <activity android:name=".Dietremind" >
         </activity>
         <activity android:name=".ReminaAcitivity" >
         </activity>
@@ -29,7 +33,7 @@
             android:label="@string/title_activity_instance_of" >
         </activity>
         <!-- 更多页面 -->
-         <activity
+        <activity
             android:name=".MoreActivity"
             android:label="@string/title_activity_instance_of" >
         </activity>
