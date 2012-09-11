@@ -18,7 +18,6 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 
-
 public class HomeActivity extends Activity implements OnClickListener {
 	private ListView list;// listview 控件
 	private Button homeBtn = null;// 首页
@@ -66,19 +65,19 @@ public class HomeActivity extends Activity implements OnClickListener {
 
 		HomeAdapter homeAdapter = new HomeAdapter(this, arrryList);
 		list.setAdapter(homeAdapter);
-		
-		//点击其中某一项后，进行跳转
+
+		// 点击其中某一项后，进行跳转
 		list.setOnItemClickListener(new OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
-		
-		Log.e("===item", "ggggg");
-		//在listview中实现某一行的跳转
-		Intent intent = new Intent(HomeActivity.this, Dietremind.class);
-        startActivity(intent);
+
+				Log.e("===item", "ggggg");
+				// 在listview中实现某一行的跳转
+				Intent intent = new Intent(HomeActivity.this, Dietremind.class);
+				startActivity(intent);
 			}
-			
+
 		});
 	}
 
@@ -87,8 +86,6 @@ public class HomeActivity extends Activity implements OnClickListener {
 		getMenuInflater().inflate(R.menu.home, menu);
 		return true;
 	}
-	
-	
 
 	/**
 	 * activity 即将显示时调用
